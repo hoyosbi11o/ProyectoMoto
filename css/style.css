@@ -8,23 +8,27 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
+    background-color: #F4F4F4;
 }
 header nav{
     font-size: 0.9rem;
-    margin: 0 0.8rem;
-    color: black;
-    
+    background-color: #000000;
+    height: 10vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 header nav ul {
     display: flex ;
     flex-direction: row;
-    justify-content: flex-end;
 }
-
 header nav ul li{
 list-style: none;
-margin: 0.8rem ;
+margin: 0.8rem 1.5rem .8rem 0;
 }
 header nav ul li a{
 text-decoration: none;
+color: rgb(255, 255, 255);
 }
+
+video {}
