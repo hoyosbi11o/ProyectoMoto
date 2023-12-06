@@ -1,12 +1,116 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     inset: 0;
     box-sizing: border-box;
 }
-:root{
-    --ligthGrey:rgba(211,211,211,1);
-    --DarkGrey:rgba(169,169,169,1);
-    --black:rgba(0,0,0,1);
-    
+
+:root {
+    --ligthGrey: rgba(211, 211, 211, 1);
+    --DarkGrey: rgba(169, 169, 169, 1);
+    --black: rgba(0, 0, 0, 1);
+    --blueDark: rgba(25, 25, 112, 1);
+    --blueLigth: rgba(135, 206, 235, 1);
+    --grey: rgba(169, 169, 169, 0.305);
 }
+
+body {
+    background-color: var(--ligthGrey);
+    display: flex;
+    flex-direction: row;
+    font-size: 100%;
+    font-family: 'Hedvig Letters Serif', serif;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    width: 17%;
+    height: 100vh;
+}
+
+nav .logo {
+    width: 100%;
+}
+
+nav .logo img {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav ul li img {
+    width: 20px;
+}
+
+.incremento {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: var(--ligthGrey);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--DarkGrey);
+    width: 83%;
+    height: 100vh;
+}
+main header{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgHeader {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+}
+
+.layout {
+    position: absolute; 
+    background-color: var(--black);
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    width: 100%;
+    height: 100%;
+}
+
+.information {
+    position: relative; 
+    font-size: 45px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: white;
+    width: 30%;
+
+}
+
