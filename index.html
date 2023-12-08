@@ -1,148 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Json Dev - Tienda de relojes</title>
-
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--Box icons-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!--Navegation-->
-    <nav class="nav">
-      <div class="nav__center container">
-        <div class="nav__logo">
-					<h1>JSON <span>DEV</span></h1>
-				</div>
-				<ul class="nav__list">
-					<span>
-						<i class="bx bxs-watch"></i>
-					</span>
-					<div class="carrito__icon">
-						<i class="bx bx-cart"></i>
-						<span class="item__total">0</span>
-					</div>
-				</ul>
-      </div>
-    </nav>
-
-    <!--Filter-->
-    <section class="filter">
-      <div class="grid">
-        <div class="div">
-          <label for="buscar"><span><i class="bx bx-search"></i></span></label>
-          <input type="text" id="buscar" placeholder="Buscar relojes...">
-        </div>
-        <div class="category">
-          <select id="category" onclick="categoryValue()">
-            <option value="">Marcas</option>
-            <option value="rolex">Rolex</option>
-            <option value="omega">Omega</option>
-            <option value="audemars">Audemars</option>
-            <option value="rolexDay">Rolex Day</option>
-            <option value="hublot">Hublot</option>
-            <option value="tag">Tag Heuer</option>
-          </select>
-        </div>
-      </div>
-    </section>
-
-    <!--Productos-->
-    <section class="productos">
-      <div class="productos__center">
-        <!-- <div class="producto">
-          <div class="image__container">
-            <img src="https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305" alt="">
-          </div>
-          <div class="producto__footer">
-            <h1>Rejoles Originales</h1>
-            <div class="rating">
-              <span>
-                <i class="bx bxs-star"></i>
-              </span>
-              <span>
-                <i class="bx bxs-star"></i>
-              </span>
-              <span>
-                <i class="bx bxs-star"></i>
-              </span>
-              <span>
-                <i class="bx bxs-star"></i>
-              </span>
-              <span>
-                <i class="bx bx-star"></i>
-              </span>
-            </div>
-            <div class="price">$102.00</div>
-          </div>
-          <div class="bottom">
-            <div class="btn__group">
-              <a href="#" class="btn addToCart">Añadir carrito</a>
-              <a href="producto-detalles.html" class="btn view">Vista</a>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </section>
-
-    <!--Carrito-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUKY</title>
+    <link rel="stylesheet" href="CSS/style.css">
     
-    <section class="carrito__overlay">
-      <div class="carrito">
-        <span class="close__carrito">
-          <i class="bx bx-x"></i>
-        </span>
-        <h1>Su Carrito</h1>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                    <img class="logo" src="/sources/logooo.jpg" alt="" srcset="">
+                <div class="holder-products">
+                    <div class="modal">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="close-modal"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                    <input type="text" id="new-product" placeholder="Nombre del producto">
+                    <input type="text" id="new-price" placeholder="Valor del producto">
+                    <input type="file" id="new-image" name="">
+                    <button id="btn-new-create">Crear nuevo objeto</button>
+                    
+                    </div>
+                    <button id="btn-create" >Crear nuevo producto</button>
+                    <select name="" id="filterXPrice">
+                        <option value="">Seleccione una opcion</option>
+                        <option value="Todos los Pruductos">Todos los Pruductos</option>
+                        <option value="menor a 30 mil">Menor a 30 mil</option>
+                        <option value="Entre 30 y 60 mil">Entre 30 y 60 mil</option>
+                        <option value="mayor a 60 mil">Mayor de 60 mil</option>
+                    </select>
+                   </div>
+                   <div class="container-icon">
 
-        <div class="carrito__center">
-
-          <!-- <div class="carrito__item">
-
-            <img src="https://cdn4.chrono24.com/images/topmodels/2875-7wlcl6ogfoc0qxg22ox6up9m-Original.png?auto=compress&amp;h=305" alt="reloj">
-            <div>
-              <h3>Relojes Originales </h3>
-              <p class="price">$122</p>
-            </div>
-            <div>
-              <span>
-                <i class="bx bxs-up-arrow"></i>
-              </span>
-              <p>1</p>
-              <span>
-                <i class="bx bxs-down-arrow"></i>
-              </span>
-            </div>
-            <div>
-              <span class="remove__item">
-                <i class="bx bx-trash"></i>
-              </span>
-            </div>
-
-            
-          </div> -->
+                    <div class="container-cart-icon" >
+                    <img src="sources/anadir-al-carrito (1).png" alt="" srcset="">
+                    <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+                    </div>
+                
+                    <div class="container-cart-products hidden-cart">
+                        <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito">NS</p>
+                                    <span class="precio-producto-carrito">$80</span>
+                                </div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="icon-close"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+    
+                        <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$200</span>
+                        </div>
+                        <p class="cart-empty">El carrito está vacío</p>
+                    </div>
+                </div>
+            </nav>
         </div>
 
-        <div class="carrito__footer">
-            <h3>Total: $ <span class="carrito__total">0</span></h3>
-            <button class="clear__carrito btn">remover carrito</button>
-        </div>
-      </div>
-    </section>
 
-    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-    <script src="js/script.js"></script>
-  </body>
-</html>
+
+        </header>
+        <div class="div1" id="div1">
+           
+        </div>
+            </main>
+    <script src="js/app.js"></script>
+    <script src="js/carrito.js"></script>
+
+
+</body>
