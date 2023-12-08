@@ -1,69 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store_Anyel</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUKY</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    
 </head>
 <body>
-  <nav >
-    <div class="logo">
-      <img src="sources/images/logo-removebg-preview.png" alt="">
-    </div>
-    <ul>
-      <li>
-        <img src="sources/icons/home.png" alt="">
-        <a href="#">Inicio</a>
-      </li>
-      <li>
-        <img src="sources/icons/casual-t-shirt- (1).png" alt="">
-        <a href="#">Productos</a>
-      </li>
-      <li>
-          <img src="sources/icons/shopping-bag.png" alt="">
-        <a href="#">Cesta</a>
-      </li>
-      <li>
-        <img src="sources/icons/help-web-button.png" alt="">
-        <a href="#">Ayuda</a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <header>
-        <img src="sources/images/imgHeader.jpg" alt="" class="imgHeader">
-      <div class="layout"></div>
-      <div class="information">
-        <p class="text">
-          Ropa femenina <br>
-          -20%
-        </p>
-        <button class="moreView">
-          Ver mas
-        </button>
-      </div>
-    </header>
-    <section class="WebContent">
-      <div class="tarjet">
-        <div class="imgTarjet"></div>
-        <div class="contentTarjet"></div>
-        <button class="buyTarjet"></button>
-      </div>
-    </section>
+    <main>
+        <header>
+            <nav>
+                    <img class="logo" src="/sources/logooo.jpg" alt="" srcset="">
+                <div class="holder-products">
+                    <div class="modal">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="close-modal"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                        />
+                    </svg>
+                    <input type="text" id="new-product" placeholder="Nombre del producto">
+                    <input type="text" id="new-price" placeholder="Valor del producto">
+                    <input type="file" id="new-image" name="">
+                    <button id="btn-new-create">Crear nuevo objeto</button>
+                    
+                    </div>
+                    <button id="btn-create" >Crear nuevo producto</button>
+                    <select name="" id="filterXPrice">
+                        <option value="">Seleccione una opcion</option>
+                        <option value="Todos los Pruductos">Todos los Pruductos</option>
+                        <option value="menor a 30 mil">Menor a 30 mil</option>
+                        <option value="Entre 30 y 60 mil">Entre 30 y 60 mil</option>
+                        <option value="mayor a 60 mil">Mayor de 60 mil</option>
+                    </select>
+                   </div>
+                   <div class="container-icon">
 
-    <footer>
-      <div class="finally">
-        <p>CONFIGURACION DE COOKIES</p>
-        <p>POLITICA DE PRIVACIDAD Y COOKIES</p>
-        <p>CONDICIONES DE COMPRA</p>
-      </div>
-      <div class="redSocials">
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-      </div>
-    </footer>
-  </main>
+                    <div class="container-cart-icon" >
+                    <img src="sources/anadir-al-carrito (1).png" alt="" srcset="">
+                    <div class="count-products">
+						<span id="contador-productos">0</span>
+					</div>
+                    </div>
+                
+                    <div class="container-cart-products hidden-cart">
+                        <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito">NS</p>
+                                    <span class="precio-producto-carrito">$80</span>
+                                </div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="icon-close"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+    
+                        <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$200</span>
+                        </div>
+                        <p class="cart-empty">El carrito está vacío</p>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        </header>
+        <div class="div1" id="div1">
+           
+        </div>
+            </main>
+    <script src="js/app.js"></script>
+    <script src="js/carrito.js"></script>
+
+
 </body>
-</html>
