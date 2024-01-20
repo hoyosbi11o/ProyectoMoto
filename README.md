@@ -1,5 +1,5 @@
-## motorcycle project
+# motorcycle project
 
-# Author: Angel Hoyos
+## Author: Angel Hoyos
 
 * deployment link: https://projectoanyel.vercel.app/
